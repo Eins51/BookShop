@@ -1,0 +1,173 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : 书城
+ Source Server Type    : MySQL
+ Source Server Version : 80028
+ Source Host           : localhost:3306
+ Source Schema         : bookshop
+
+ Target Server Type    : MySQL
+ Target Server Version : 80028
+ File Encoding         : 65001
+
+ Date: 16/03/2022 15:43:57
+*/
+
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for goods
+-- ----------------------------
+DROP TABLE IF EXISTS `goods`;
+CREATE TABLE `goods`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `cover` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `image1` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `image2` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `price` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `intro` varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `stock` int NULL DEFAULT NULL,
+  `type_id` int NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `fk_type_id_idx`(`type_id` ASC) USING BTREE,
+  CONSTRAINT `fk_type_id` FOREIGN KEY (`type_id`) REFERENCES `type` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 120 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
+-- Records of goods
+-- ----------------------------
+INSERT INTO `goods` VALUES (9, 'You Fucking Got This : Motivational Swear Words Coloring Book', 'picture/1-1.jpg', 'picture/1-1.jpg', 'picture/1-1.jpg', '5.99', 'Relax Your Mind With This Beautiful Sweary Adult Coloring Book.\r\nBe Honest, You’ve had a Shitty Day', 10, 1);
+INSERT INTO `goods` VALUES (10, ' I Am Confident, Brave & Beautiful: A Coloring Book for Girls', 'picture/1-2.jpg', 'picture/1-2.jpg', 'picture/1-2.jpg', '6.99', 'This groundbreaking coloring book is all about building a girl\'s confidence, \r\nimagination, and spirit! The 22+ coloring pages encourage girls to think beyond \r\nsocial conventions and inspire conversations with adults about what it really means to be confident, brave, and beautiful.', 10, 1);
+INSERT INTO `goods` VALUES (11, 'Unbreakable: How I Turned My Depression and Anxiety into Motivation', 'picture/1-3.jpg', 'picture/1-3.jpg', 'picture/1-3.jpg', '14.99', 'In Unbreakable, Jay Glazer talks directly to you, his teammates, and shares his truth. All the  success \r\nfrom his screeching-and-swerving joy ride through professional football, the media, the MMA fighting \r\nworld, Hollywood, the military-warrior community, comes with a side of relentless depression and anxiety ', 10, 1);
+INSERT INTO `goods` VALUES (12, 'Eight Dates: Essential Conversations for a Lifetime of Love', 'picture/1-4.jpg', 'picture/1-4.jpg', 'picture/1-4.jpg', '21.95', 'Strengthen and deepen your love with a fun, ingenious program \r\nof eight life-changing conversations—on essential topics such as money, \r\n', 10, 1);
+INSERT INTO `goods` VALUES (13, 'A Million Kawaii Cuties: The Sweetest Things to Color (A Million Creatures to Color)', 'picture/1-5.jpg', 'picture/1-5.jpg', 'picture/1-5.jpg', '8.99', 'Explore the enticing world of kawaii in this beautiful coloring book!', 10, 1);
+INSERT INTO `goods` VALUES (14, '100 Left Hand Patterns Every Piano Player Should Know: Play the Same Song \r\n', 'picture/1-6.jpg', 'picture/1-6.jpg', 'picture/1-6.jpg', '17.98', '00 Left Hand Patterns Every Piano Player Should Know (Play the Same Song 100 Different Ways) \r\nby Music Mentor Jerald Simon, is one of the books from the Music Motivation® Series. This book \r\nwas created to help piano students of all ages and skill levels learn how to improvise and arrange music of their own.', 10, 1);
+INSERT INTO `goods` VALUES (15, 'Music Theory for the Bass Player: A Comprehensive and Hands-on Guide', 'picture/1-7.jpg', 'picture/1-7.jpg', 'picture/1-7.jpg', '31.46', 'Music Theory for the Bass Player is a comprehensive and immediately applicable \r\nguide to making you a well-grounded groover, informed bandmate and all-around \r\nmore creative musician.', 10, 1);
+INSERT INTO `goods` VALUES (16, 'Little Book of Louis Vuitton: The Story of the Iconic Fashion House', 'picture/1-8.jpg', 'picture/1-8.jpg', 'picture/1-8.jpg', '12.61', 'Little Book of Louis Vuitton is the pocket-sized and fully illustrated story of one of the world\'s most \r\nluxurious fashion houses.', 10, 1);
+INSERT INTO `goods` VALUES (18, 'The Botanist\'s Sticker Anthology INSTALL AND MAINTAIN GRID TIED', 'picture/1-9.jpg', 'picture/1-9.jpg', 'picture/1-9.jpg', '13.99', 'Get lost in the beauty of the natural world in this captivating collection of botanical stickers.\r\n\r\nPage after page is packed with beautiful vintage drawings of ornamental flowers, tropical ferns, \r\nand other exotic plants and fungi.', 10, 1);
+INSERT INTO `goods` VALUES (19, 'Hayao Miyazaki The BRAND NEW winter release from Jessica Redland', 'picture/1-10.jpg', 'picture/1-10.jpg', 'picture/1-10.jpg', '37.49', 'A richly illustrated journey through the extraordinary cinematic worlds of beloved \r\nfilmmaker Hayao Miyazaki \r\n\r\nFor over four decades, Hayao Miyazaki has been enchanting audiences of all ages. \r\nHis animated films, often featuring children navigating unfamiliar and challenging worlds, \r\noffer timeless explorations of youth and what it means to grow up', 10, 1);
+INSERT INTO `goods` VALUES (20, 'Avatar: The Last Airbender--The Lost Adventures and Team Avatar Tales Library ', 'picture/1-11.jpg', 'picture/1-11.jpg', 'picture/1-11.jpg', '23.99', 'The comics continuation of Nickelodeon\'s hit series Avatar: The Last Airbender returns with \r\na treasure trove of short stories, collected for the first time in hardcover!', 10, 1);
+INSERT INTO `goods` VALUES (21, 'Disney Dreams Collection by Thomas Kinkade Studios: 2022 Wall Calendar', 'picture/1-12.jpg', 'picture/1-12.jpg', 'picture/1-12.jpg', '12.99', 'This tenth edition of the Disney Dreams Wall Calendar captures the timeless \r\nmagic of classic Disney stories and their captivating characters in settings imagined \r\nby Thomas Kinkade Studios.', 10, 1);
+INSERT INTO `goods` VALUES (22, 'Humans New Stories About Mythic Heroes Divorce And Separation', 'picture/1-13.jpg', 'picture/1-13.jpg', 'picture/1-13.jpg', '14.90', '\"Just when we need it, Humans reminds us what it means to be human . . . \r\none of the most influential art projects of the decade.” ―Washington Post ', 10, 1);
+INSERT INTO `goods` VALUES (24, 'Patterns of India: A Journey Through Colors, Textiles and type', 'picture/1-14.jpg', 'picture/1-14.jpg', 'picture/1-14.jpg', '4.99', 'It\'s the trip of a lifetime—a textile-based tour of colorful Rajasthan, India featuring more \r\nthan 200 lush photographs depicting everyday life in one of the most vibrant regions in the world.', 10, 1);
+INSERT INTO `goods` VALUES (25, 'Ernst Haas: New York in Color, 1952-1962 winter release', 'picture/1-15.jpg', 'picture/1-15.jpg', 'picture/1-15.jpg', '27.99', 'The first book on master photographer Ernst Haas\'s work dedicated to both his classic \r\nand newly discovered New York City color photographs of the 1950s and 60s.', 10, 1);
+INSERT INTO `goods` VALUES (26, 'Made for Living: Collected Interiors for All Sorts of Styles', 'picture/1-16.jpg', 'picture/1-16.jpg', 'picture/1-16.jpg', '12.99', 'NATIONAL BESTSELLER • The trendsetting designer known for her effortless style \r\nshares the secrets of the art of layering, with more than 250 gorgeous photographs of her \r\nsignature interiors.  ', 10, 1);
+INSERT INTO `goods` VALUES (27, 'This is Home: The Art of Simple Living release from Jessica Redland', 'picture/1-17.jpg', 'picture/1-17.jpg', 'picture/1-17.jpg', '25.09', 'This is Home is a back-to-basics guide on how to create authentic wholehearted interiors. \r\nIt\'s about living simply – finding the essence of what makes you happy at home and creating spaces that reflect your needs and style. ', 10, 1);
+INSERT INTO `goods` VALUES (28, 'Snowflakes Over The Starfish Café: The BRAND NEW winter ', 'picture/1-18.jpg', 'picture/1-18.jpg', 'picture/1-18.jpg', '3.99', '\'Heartbreakingly moving and yet beautifully uplifting, I cried for all the right reasons!\' Jo Bartlett', 10, 1);
+INSERT INTO `goods` VALUES (29, 'A Collection of Stories for 2 Year Olds most beloved fairytale characters', 'picture/2-1.jpg', 'picture/2-1.jpg', 'picture/2-1.jpg', '9.99', 'Snuggle up to your favorite nursery rhymes and drift into the magical worlds of \r\nall your most beloved fairytale characters with this unique collection of enchanting \r\nstories carefully selected to enthrall 2-year-olds.', 10, 2);
+INSERT INTO `goods` VALUES (30, 'Five-minute Stories: Over 50 Tales and Fables, and well-loved fairy tales. ', 'picture/2-2.jpg', 'picture/2-2.jpg', 'picture/2-2.jpg', '8.50', 'There is always time to read together with this deluxe treasure-trove of five-minute stories, \r\nfables, and well-loved fairy tales. ', 10, 2);
+-- ----------------------------
+-- Table structure for order
+-- ----------------------------
+DROP TABLE IF EXISTS `order`;
+CREATE TABLE `order`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `total` float NULL DEFAULT NULL,
+  `amount` int NULL DEFAULT NULL,
+  `status` tinyint(1) NULL DEFAULT NULL,
+  `paytype` tinyint(1) NULL DEFAULT NULL,
+  `name` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `phone` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `address` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `datetime` datetime NULL DEFAULT NULL,
+  `user_id` int NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `fk_user_id_idx`(`user_id` ASC) USING BTREE,
+  CONSTRAINT `fk_user_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 96 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+-- ----------------------------
+-- Table structure for orderitem
+-- ----------------------------
+DROP TABLE IF EXISTS `orderitem`;
+CREATE TABLE `orderitem`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `price` float NULL DEFAULT NULL,
+  `amount` int NULL DEFAULT NULL,
+  `goods_id` int NULL DEFAULT NULL,
+  `order_id` int NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `fk_order_id_idx`(`order_id` ASC) USING BTREE,
+  INDEX `fk_orderitem_goods_id_idx`(`goods_id` ASC) USING BTREE,
+  CONSTRAINT `fk_order_id` FOREIGN KEY (`order_id`) REFERENCES `order` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `fk_orderitem_goods_id` FOREIGN KEY (`goods_id`) REFERENCES `goods` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 106 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
+-- Records of orderitem
+-- ----------------------------
+INSERT INTO `orderitem` VALUES (104, 36, 1, 13, 95);
+INSERT INTO `orderitem` VALUES (105, 29, 1, 14, 95);
+
+-- ----------------------------
+-- Table structure for recommend
+-- ----------------------------
+DROP TABLE IF EXISTS `recommend`;
+CREATE TABLE `recommend`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `type` tinyint(1) NULL DEFAULT NULL,
+  `goods_id` int NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `fk_goods_id_idx`(`goods_id` ASC) USING BTREE,
+  CONSTRAINT `fk_goods_id` FOREIGN KEY (`goods_id`) REFERENCES `goods` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 50 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
+-- Records of recommend
+-- ----------------------------
+INSERT INTO `recommend` VALUES (11, 3, 12);
+INSERT INTO `recommend` VALUES (12, 3, 13);
+INSERT INTO `recommend` VALUES (13, 3, 14);
+INSERT INTO `recommend` VALUES (14, 3, 15);
+INSERT INTO `recommend` VALUES (15, 3, 16);
+INSERT INTO `recommend` VALUES (17, 3, 18);
+
+
+-- ----------------------------
+-- Table structure for type
+-- ----------------------------
+DROP TABLE IF EXISTS `type`;
+CREATE TABLE `type`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
+-- Records of type
+-- ----------------------------
+INSERT INTO `type` VALUES (1, 'Arts & Photograph');
+INSERT INTO `type` VALUES (2, 'Children\'s Book');
+INSERT INTO `type` VALUES (3, 'Computing and Technology');
+INSERT INTO `type` VALUES (4, 'Engineering and Transportation');
+INSERT INTO `type` VALUES (5, 'Business & Money');
+INSERT INTO `type` VALUES (6, 'History');
+INSERT INTO `type` VALUES (7, 'Literature');
+
+-- ----------------------------
+-- Table structure for user
+-- ----------------------------
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `email` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `password` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `name` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `phone` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `address` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `isadmin` bit(1) NULL DEFAULT NULL,
+  `isvalidate` bit(1) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE INDEX `username_UNIQUE`(`username` ASC) USING BTREE,
+  UNIQUE INDEX `email_UNIQUE`(`email` ASC) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 40 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+INSERT INTO `user` VALUES (39, 'Hypnus', '605597301@qq.com', '123456', 'Hypnus', '1111', '1111', b'0', b'0');
+
+SET FOREIGN_KEY_CHECKS = 1;
