@@ -11,7 +11,7 @@
  Target Server Version : 80028
  File Encoding         : 65001
 
- Date: 21/03/2022 19:33:21
+ Date: 27/03/2022 11:26:47
 */
 
 SET NAMES utf8mb4;
@@ -88,6 +88,58 @@ INSERT INTO `goods` VALUES (57, 'The Honey Bus: A Memoir of Loss, Courage and a 
 INSERT INTO `goods` VALUES (58, 'The Network State: How To Start a New Country Kindle Edition ', 'picture/4-2.jpg', 'picture/4-2.jpg', 'picture/4-2.jpg', '9.99', '“Balaji has the highest rate of output per minute of good new ideas of anybody I’ve ever met, and The Network State may be his best.” — Marc Andreessen, cofounder of Andreessen Horowitz', 10, 4);
 INSERT INTO `goods` VALUES (59, 'Stolen Focus: Why You Can\'t Pay Attention Living and Survival Techniques', 'picture/4-3.jpg', 'picture/4-3.jpg', 'picture/4-3.jpg', '13.99', 'NEW YORK TIMES BESTSELLER • Our ability to pay attention is collapsing. From the New York Times bestselling author of Chasing the Scream and Lost Connections comes a groundbreaking', 10, 4);
 INSERT INTO `goods` VALUES (61, 'Bad Blood: Secrets and Lies in a Silicon Valley Startup 2nd edition', 'picture/4-4.jpg', 'picture/4-4.jpg', 'picture/4-4.jpg', '13.99', 'NATIONAL BESTSELLER • The gripping story of Elizabeth Holmes and Theranos—one of the biggest corporate frauds in history—a tale of ambition and hubris set amid the bold promises of Silicon Valley, rigorously reported by the prize-winning journalist. With a new Afterword.', 10, 4);
+INSERT INTO `goods` VALUES (68, 'The Prepper\'s Survival Bible: 3 in 1 Collection | Foods to Stockpile, Off-Grid Living', 'picture/4-5.jpg', 'picture/4-5.jpg', 'picture/4-5.jpg', '22.99', 'We live in dangerous times, and wise people worldwide realize that being prepared can mean a difference in the long run. ', 10, 4);
+INSERT INTO `goods` VALUES (69, 'Arriving Today: From Factory to Front Door and windows', 'picture/4-6.jpg', 'picture/4-6.jpg', 'picture/4-6.jpg', '21.31', 'The Wall Street Journal technology columnist reveals the fascinating story behind the misleadingly simple phrase shoppers take for granted—“Arriving Today”—in this eye-opening investigation into the new rules of online commerce, transportation, and supply chain management.', 10, 4);
+INSERT INTO `goods` VALUES (70, ' Old-Fashioned Toolmaking: The Classic Treatise on Lapping, Threading', 'picture/4-7.jpg', 'picture/4-7.jpg', 'picture/4-7.jpg', '22.01', 'Bringing together the collective wisdom of a past generation of craftsmen, Old Fashioned Toolmaking provides an in-depth record of the skills and techniques that made the mass production revolution of the twentieth century possible. ', 10, 4);
+INSERT INTO `goods` VALUES (71, 'Word Search for Kids Ages 6-8: 100 Word Search Puzzles (Search and Find)', 'picture/4-8.jpg', 'picture/4-8.jpg', 'picture/4-8.jpg', '6.99', 'Are you looking for a fun way to boost your child’s learning while providing hours of screen-free entertainment? This book of word search puzzles is the perfect choice. ', 10, 4);
+INSERT INTO `goods` VALUES (72, 'DIY SOLAR POWER FOR BEGINNERS: A TECHNICAL GUIDE ON HOW TO DESIGN', 'picture/4-9.jpg', 'picture/4-9.jpg', 'picture/4-9.jpg', '14.99', 'Imagine if you could cut your electricity bill in half by adding a solar setup to your house. Now what if I said you could design and install your DIY solar power system and escape the labor costs?', 10, 4);
+INSERT INTO `goods` VALUES (73, 'Haynes Repair Manual,Courage and a Girl Saved by Bees Kindle', 'picture/4-10.jpg', 'picture/4-10.jpg', 'picture/4-10.jpg', '32.27', 'Each Haynes manual is written for the do-it-yourselfer and provides step-by-step instructions based on a complete disassembly of the vehicle.  This hands-on experience provides the reader with specific and detailed', 10, 4);
+INSERT INTO `goods` VALUES (74, 'The Complete Driving Education Manual for New Drivers', 'picture/4-11.jpg', 'picture/4-11.jpg', 'picture/4-11.jpg', '9.97', 'If you want to get your loved ones behind the wheel without losing your sleep, then keep reading…', 10, 4);
+INSERT INTO `goods` VALUES (75, 'Vanderbilt: The Rise and Fall of an American Dynasty Hardcover ', 'picture/4-12.jpg', 'picture/4-12.jpg', 'picture/4-12.jpg', '14.99', 'New York Times bestselling author and journalist Anderson Cooper teams with New York Times bestselling historian and novelist Katherine Howe to chronicle the rise and fall of a legendary American dynasty—his mother‘s family, the Vanderbilts', 10, 4);
+INSERT INTO `goods` VALUES (76, 'Pirate Women: The Princesses, Prostitutes, and Privateers ', 'picture/4-13.jpg', 'picture/4-13.jpg', 'picture/4-13.jpg', '17.99', 'In the first-ever comprehensive survey of the world\'s female buccaneers, Pirate Women: The Princesses, Prostitutes, and Privateers Who Ruled the Seven Seas tells of the women, both real and legendary, who through the ages sailed alongside—and sometimes in command of—their male counterparts.', 10, 4);
+INSERT INTO `goods` VALUES (77, 'The First 90 Days: Proven Strategies for Getting Up-4th edition', 'picture/5-1.jpg', 'picture/5-1-1.jpg', 'picture/5-1-2.jpg', '4.73', 'The world\'s most trusted guide for leaders in transition', 10, 5);
+INSERT INTO `goods` VALUES (78, 'Profit First: Transform Your Business from a Cash-Eating Monster', 'picture/5-2.jpg', 'picture/5-2.jpg', 'picture/5-2.jpg', '13.42', 'Author of cult classics The Pumpkin Plan and The Toilet Paper Entrepreneur offers a simple, counterintuitive cash management solution that will help small businesses break out of the doom spiral and achieve instant profitability.', 10, 5);
+INSERT INTO `goods` VALUES (79, 'Profit First for Real Estate Investing Paperback — 5th edition', 'picture/5-3.jpg', 'picture/5-3-1.jpg', 'picture/5-3-1.jpg', '21.16', 'It\'s time to stop living deal to deal.', 10, 5);
+INSERT INTO `goods` VALUES (80, 'The Millionaire Real Estate Investor: Buy Low, Rent High — 5th edition', 'picture/5-4.jpg', 'picture/5-4-1.jpg', 'picture/5-4-2.jpg', '4.40', '\'This book is not just a bargain, it\'s a steal. It\'s filled with practical, workable advice for anyone wanting to build wealth.\'-Mike Summey, co-author of the bestselling The Weekend Millionaire\'s Secrets to Investing in Real Estate', 10, 5);
+INSERT INTO `goods` VALUES (81, 'Financial Freedom with Real Estate Investing: The Blueprint To Quitting', 'picture/5-5.jpg', 'picture/5-5-1.jpg', 'picture/5-5-1.jpg', '14.99', 'Discover the (surprising) secret to lifelong financial freedom with real estate investing', 10, 5);
+INSERT INTO `goods` VALUES (82, 'Investing in Rental Properties for Beginners: Buy Low, Rent High', 'picture/5-6.jpg', 'picture/5-6-1.jpg', 'picture/5-6-1.jpg', '9.99', 'This will teach you (the ordinary investor) how to tailor your investment strategy to your pocketbooks (and no one else\'s)', 10, 5);
+INSERT INTO `goods` VALUES (83, 'Buy It, Rent It, Profit! (Updated Edition): Make Money as a Landlord', 'picture/5-7.jpg', 'picture/5-7-1.jpg', 'picture/5-7-1.jpg', '15.49', 'Now updated for today’s bullish real estate market, this is the go-to, classic entrepreneurial guide for landlords and real estate investors who want to buy and manage rental properties for long-term wealth.', 10, 5);
+INSERT INTO `goods` VALUES (84, '$100M Offers: How To Make Offers So Good People Feel Stupid Saying No', 'picture/5-8.jpg', 'picture/5-8-1.jpg', 'picture/5-8-2.jpg', '24.91', 'If you want to get more prospects to reply to your ads for less advertising dollars, and get them to say YES to breathtaking prices...then grab this book, use its contents, and see for yourself.', 10, 5);
+INSERT INTO `goods` VALUES (85, 'How To Write Emails That Sell: Secrets From The Most Profitable Emails', 'picture/5-9.jpg', 'picture/5-9-1.jpg', 'picture/5-9-1.jpg', '11.97', 'Short Read To Master The Art Of Emails', 10, 5);
+INSERT INTO `goods` VALUES (86, 'Sales Secrets: The World\'s Top Salespeople Share Their Secrets to Success', 'picture/5-10.jpg', 'picture/5-10-1.jpg', 'picture/5-10-2.jpg', '18.98', 'Get Sales Secrets today to learn from the best, study the best, and sell like the best!', 10, 5);
+INSERT INTO `goods` VALUES (87, 'Seven Figure Social Selling: Over 400 Pages of Proven Social Selling Scripts', 'picture/5-11.jpg', 'picture/5-11-1.jpg', 'picture/5-11-1.jpg', '18.64', 'Once you\'ve mastered social selling, you\'ll never be without work or money again!', 10, 5);
+INSERT INTO `goods` VALUES (88, 'Instagram Income: How Solo Entrepreneurs and Small Companies can Make Money', 'picture/5-12.jpg', 'picture/5-12-1.jpg', 'picture/5-12-1.jpg', '12.99', 'Be ready to never look at IG the same way again.', 10, 5);
+INSERT INTO `goods` VALUES (89, 'An Easy & Proven Way to Build Good Habits & Break Bad Ones—2nd edition', 'picture/5-13.jpg', 'picture/5-13-1.jpg', 'picture/5-13-1.jpg', '10.42', 'Tiny Changes, Remarkable Results', 10, 5);
+INSERT INTO `goods` VALUES (90, 'The Bond King: How One Man Made a Market, Built an Empire and so on', 'picture/5-14.jpg', 'picture/5-14.jpg', 'picture/5-14.jpg', '20.99', 'From the host of NPR’s Planet Money, the deeply-investigated story of how one visionary, dogged investor changed American finance forever.', 10, 5);
+INSERT INTO `goods` VALUES (91, 'Trading in the Zone: Master the Market with Confidence, Discipline', 'picture/5-15.jpg', 'picture/5-15.jpg', 'picture/5-15.jpg', '22.00', 'Douglas uncovers the underlying reasons for lack of consistency and helps traders overcome the ingrained mental habits that cost them money.', 10, 5);
+INSERT INTO `goods` VALUES (92, 'Principles for Dealing with the Changing World Order: Why Nations Succeed and Fail ', 'picture/6-1.jpg', 'picture/6-1-1.jpg', 'picture/6-1-1.jpg', '21.00', 'Life and Work, Winner of the Axiom Business Book Award for 2018', 10, 6);
+INSERT INTO `goods` VALUES (93, 'The Gates of Europe', 'picture/6-2.jpg', 'picture/6-2-1.jpg', 'picture/6-2-1.jpg', '12.99', 'A New York Times bestseller, this definitive history of Ukraine is “an exemplary account of Europe’s least-known large country', 10, 6);
+INSERT INTO `goods` VALUES (94, 'We Don\'t Know Ourselves: A Personal History of Modern Ireland', 'picture/6-3.jpg', 'picture/6-3.jpg', 'picture/6-3.jpg', '25.97', 'A celebrated Irish writer’s magisterial, brilliantly insightful chronicle of the wrenching transformations that dragged his homeland into the modern world.', 10, 6);
+INSERT INTO `goods` VALUES (95, 'The Trials of Harry S. Truman: The Extraordinary Presidency of an Ordinary Man, 1945-1953', 'picture/6-4.jpg', 'picture/6-4-1.jpg', 'picture/6-4-1.jpg', '26.79', 'recounting how so ordinary a man met the extraordinary challenge of leading America through the pivotal years of the mid-20th century.', 10, 6);
+INSERT INTO `goods` VALUES (96, 'April 1945: The Hinge of History', 'picture/6-5.jpg', 'picture/6-5.jpg', 'picture/6-5.jpg', '24.48', 'Acclaimed historian and New York Times bestselling author Craig Shirley delivers a compelling account of 1945, particularly the watershed events in the month of April, that details how America emerged from World War II as a leading superpower.', 10, 6);
+INSERT INTO `goods` VALUES (97, 'Ways and Means: Lincoln and His Cabinet and the Financing of the Civil War', 'picture/6-6.jpg', 'picture/6-6.jpg', 'picture/6-6.jpg', '25.15', 'Captivating . . . [Lowenstein] makes what subsequently occurred at Treasury and on Wall Street during the early 1860s seem as enthralling as what transpired on the battlefield or at the White House.', 10, 6);
+INSERT INTO `goods` VALUES (98, 'Lincoln and the Fight for Peace ', 'picture/6-7.jpg', 'picture/6-7-1.jpg', 'picture/6-7-1.jpg', '22.39', 'A groundbreaking, revelatory history of Abraham Lincoln’s plan to secure a just and lasting peace after the Civil War', 10, 6);
+INSERT INTO `goods` VALUES (99, 'Salmon P. Chase: Lincoln\'s Vital Rival', 'picture/6-8.jpg', 'picture/6-8-1.jpg', 'picture/6-8-1.jpg', '22.64', 'From an acclaimed, New York Times bestselling biographer, a timely reassessment of Abraham Lincoln’s indispensable Secretary of the Treasury: a leading proponent for black rights both before and during his years in cabinet and later as Chief Justice of the United States.', 10, 6);
+INSERT INTO `goods` VALUES (100, 'Campaign of the Century: Kennedy, Nixon, and the Election of 1960', 'picture/6-9.jpg', 'picture/6-9.jpg', 'picture/6-9.jpg', '27.99', '[Gellman] offers as detailed an exploration of the 1960 presidential race as can be found.', 10, 6);
+INSERT INTO `goods` VALUES (101, 'The Jazz Age President: Defending Warren G. Harding', 'picture/6-10.jpg', 'picture/6-10.jpg', 'picture/6-10.jpg', '18.97', 'Presidents are ranked wrong. In The Jazz Age President: Defending Warren G. Harding, Ryan Walters mounts a case that Harding deserves to move up—and supplies the evidence to make that case strong', 10, 6);
+INSERT INTO `goods` VALUES (102, 'One Damn Thing After Another: Memoirs of an Attorney General', 'picture/6-11.jpg', 'picture/6-11.jpg', 'picture/6-11.jpg', '21.91', 'The former attorney general provides a candid account of his historic tenures serving two vastly different presidents, George H.W. Bush and Donald J. Trump.', 10, 6);
+INSERT INTO `goods` VALUES (103, 'How reasonable Americans could support Trump: Helping liberals understand the MAGAverse, and whatever comes next', 'picture/6-12.jpg', 'picture/6-12-1.jpg', 'picture/6-12-1.jpg', '17.00', 'We are a deeply divided country.', 10, 6);
+INSERT INTO `goods` VALUES (104, '“Our Crowd”: The Great Jewish Families of New York (Modern Jewish History)', 'picture/6-13.jpg', 'picture/6-13.jpg', 'picture/6-13.jpg', '49.00', 'The #1 New York Times bestseller that traces the rise of the Guggenheims, the Goldmans, and other families from immigrant poverty to social prominence.', 10, 6);
+INSERT INTO `goods` VALUES (105, 'Princeton Review AP U.S. History Premium Prep, 2022: 6 Practice Tests + Complete Content Review + Strategies & Techniques (2022)', 'picture/6-14.jpg', 'picture/6-14.jpg', 'picture/6-14.jpg', '17.86', 'Ace the 2022 AP U.S. History Exam with this Premium version of The Princeton Review\'s comprehensive study guide. Includes 6 full-length practice exams, thorough content reviews, targeted test strategies, and access to online extras.', 10, 6);
+INSERT INTO `goods` VALUES (106, 'Run, Rose, Run', 'picture/7-1.jpg', 'picture/7-1.jpg', 'picture/7-1.jpg', '18.00', 'a thriller about a young singer-songwriter on the rise and on the run, and determined to do whatever it takes to survive.', 10, 7);
+INSERT INTO `goods` VALUES (107, 'Berserk Deluxe Volume 1', 'picture/7-2.jpg', 'picture/7-2-1.jpg', 'picture/7-2-2.jpg', '36.68', 'an international legion of hardcore devotees', 10, 7);
+INSERT INTO `goods` VALUES (108, 'The Boy, the Mole, the Fox and the Horse', 'picture/7-3.jpg', 'picture7-3-1.jpg', 'picture/7-3-2.jpg', '5.84', '#1 NEW YORK TIMES BESTSELLER', 10, 7);
+INSERT INTO `goods` VALUES (109, 'I\'m Not Scared, You\'re Scared——5th edition', 'picture/7-4.jpg', 'picture/7-4-1.jpg', 'picture/7-4-2.jpg', '14.49', 'The author of Get Out of Your Head offers practical solutions for creating true community, the kind that’s crucial to our mental and spiritual health.', 10, 7);
+INSERT INTO `goods` VALUES (110, 'Find Your People: Building Deep Community in a Lonely World', 'picture/7-5.jpg', 'picture/7-5.jpg', 'picture/7-5.jpg', '15.53', 'The author of Get Out of Your Head offers practical solutions for creating true community, the kind that’s crucial to our mental and spiritual health.', 10, 7);
+INSERT INTO `goods` VALUES (111, 'Get Out of Your Head: Stopping the Spiral of Toxic Thoughts', 'picture/7-6.jpg', 'picture/7-6-1.jpg', 'picture/7-6-2.jpg', '14.34', 'A must-have resource for anyone looking to get control of their thoughts.', 10, 7);
+INSERT INTO `goods` VALUES (112, 'The Butcher and The Wren: A Novel', 'picture/7-7.jpg', 'picture/7-7.jpg', 'picture/7-7.jpg', '27.00', 'From the co-host of chart-topping true crime podcast Morbid, a thrilling debut novel told from the dueling perspectives of a notorious serial killer and the medical examiner following where his trail of victims leads', 10, 7);
+INSERT INTO `goods` VALUES (113, 'The Lincoln Highway: A Novel', 'picture/7-8.jpg', 'picture/7-8.jpg', 'picture/7-8.jpg', '14.99', 'A New York Times Notable Book, and Chosen by Oprah Daily, Time, NPR, The Washington Post and Barack Obama as a Best Book of the Year', 10, 7);
+INSERT INTO `goods` VALUES (114, 'The Midnight Library: A Novel', 'picture/7-9.jpg', 'picture/7-9.jpg', 'picture7-9.jpg', '13.29', 'Winner of the Goodreads Choice Award for Fiction | A Good Morning America Book Club Pick | Independent (London) Ten Best Books of the Year', 10, 7);
+INSERT INTO `goods` VALUES (115, 'The Paris Apartment: A Novel ', 'picture/7-10.jpg', 'picture/7-10.jpg', 'picture/7-10.jpg', '18.16', 'a thriller about a young singer-songwriter on the rise and on the run, and determined to do whatever it takes to survive.', 10, 7);
+INSERT INTO `goods` VALUES (116, 'The Maid: A Novel', 'picture/7-11.jpg', 'picture/7-11.jpg', 'picture/7-11.jpg', '17.26', 'The reader comes to understand Molly’s worldview, and to sympathize with her longing to be accepted—a quest that gives The Maid real emotional heft.', 10, 7);
+INSERT INTO `goods` VALUES (117, 'Where the Crawdads Sing', 'picture/7-12.jpg', 'picture/7-12.jpg', 'picture/7-12.jpg', '3.95', 'I can\'t even express how much I love this book! I didn\'t want this story to end!', 10, 7);
+INSERT INTO `goods` VALUES (118, 'The Lightning Rod: A Zig & Nola Novel', 'picture/7-13.jpg', 'picture/7-13.jpg', 'picture/7-13.jpg', '18.42', 'Zig and Nola are back—in the hugely entertaining, highly anticipated follow-up to Brad Meltzer’s #1 New York Times bestselling thriller The Escape Artist.', 10, 7);
+INSERT INTO `goods` VALUES (119, 'The Club: A Novel', 'picture/7-14.jpg', 'picture/7-14.jpg', 'picture/7-14.jpg', '17.17', 'From the author of People Like Her comes a smart and sinister murder mystery set in the secretive world of exclusive celebrity clubs.', 10, 7);
 
 -- ----------------------------
 -- Table structure for order
@@ -135,6 +187,7 @@ CREATE TABLE `orderitem`  (
 -- Records of orderitem
 -- ----------------------------
 INSERT INTO `orderitem` VALUES (104, 36, 1, 13, 95);
+INSERT INTO `orderitem` VALUES (105, 29, 1, 14, 95);
 
 -- ----------------------------
 -- Table structure for recommend
@@ -159,6 +212,19 @@ INSERT INTO `recommend` VALUES (14, 3, 15);
 INSERT INTO `recommend` VALUES (15, 3, 16);
 INSERT INTO `recommend` VALUES (17, 3, 18);
 INSERT INTO `recommend` VALUES (18, 3, 19);
+INSERT INTO `recommend` VALUES (33, 2, 10);
+INSERT INTO `recommend` VALUES (34, 2, 11);
+INSERT INTO `recommend` VALUES (35, 2, 12);
+INSERT INTO `recommend` VALUES (36, 2, 13);
+INSERT INTO `recommend` VALUES (37, 2, 14);
+INSERT INTO `recommend` VALUES (38, 2, 15);
+INSERT INTO `recommend` VALUES (39, 2, 16);
+INSERT INTO `recommend` VALUES (40, 2, 18);
+INSERT INTO `recommend` VALUES (41, 2, 26);
+INSERT INTO `recommend` VALUES (44, 3, 10);
+INSERT INTO `recommend` VALUES (47, 2, 9);
+INSERT INTO `recommend` VALUES (48, 3, 9);
+INSERT INTO `recommend` VALUES (49, 1, 13);
 
 -- ----------------------------
 -- Table structure for type
@@ -203,7 +269,9 @@ CREATE TABLE `user`  (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
+INSERT INTO `user` VALUES (1, 'admin', 'admin@vilicode.com', 'admin', '管理员', '3330048', '中华人民共和国', b'1', b'0');
+INSERT INTO `user` VALUES (37, 'randy', '2396129937@qq.com', 'randy', 'randy', '18819773661', '清远东城', b'0', b'0');
+INSERT INTO `user` VALUES (38, 'syz', '3324779867@qq.com', 'pch520', 'syz', '15773852102', '湖南长沙', b'0', b'0');
 INSERT INTO `user` VALUES (39, 'Hypnus', '605597301@qq.com', '123456', 'Hypnus', '1111', '1111', b'0', b'0');
 
 SET FOREIGN_KEY_CHECKS = 1;
-
