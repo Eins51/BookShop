@@ -4,7 +4,10 @@ a{
 body{
 	margin:0;
 	font-family: 'Roboto-Regular';
-	background-color:#fff;
+	background-image: url("../images/background.jpg");
+	background-repeat: no repeat;
+	background-attachment: fixed;
+	background-size: cover;
 }
 @font-face {
       font-family: 'Roboto-Regular';
