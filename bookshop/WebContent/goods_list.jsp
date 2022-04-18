@@ -16,12 +16,9 @@
     <script type="text/javascript" src="layer/layer.js"></script>
     <script type="text/javascript" src="js/cart.js"></script>
 </head>
+
+
 <body>
-
-
-
-
-
 
 
 <!--header-->
@@ -33,15 +30,20 @@
 
 <!--products-->
 <div class="products">
-    <div class="container">
-        <h2><c:choose><c:when test="${empty t}">All</c:when><c:otherwise>${t.name}</c:otherwise> </c:choose></h2>
+    <div class="container" style="background-color: rgb(242, 242, 242, 0.8); padding: 50px">
+    	
+		<h2 style="color: #333399; text-shadow: 2px 2px 5px #fff; font: italic 3em Georgia, serif">
+        	<c:choose>
+        		<c:when test="${empty t}">All Books</c:when>
+        		<c:otherwise>${t.name}</c:otherwise> 
+        	</c:choose>
+        </h2>
 
-        <div class="col-md-12 product-model-sec">
-
+        <div class="col-md-12 product-model-sec" >
             <c:forEach items="${p.list}" var="g">
                 <div class="product-grid">
                     <a href="./goods_detail?id=${g.id}">
-                        <div class="more-product"><span> </span></div>
+                       
                         <div class="product-img b-link-stripe b-animate-go  thickbox">
                             <img src="${g.cover}" class="img-responsive" alt="${g.name}" width="240" height="240">
                             <div class="b-wrapper">
@@ -53,7 +55,7 @@
                     </a>
                     <div class="product-info simpleCart_shelfItem">
                         <div class="product-info-cust prt_name">
-                            <h4>${g.name}</h4>
+                            <h4 class="book-name">${g.name}</h4>
                             <span class="item_price">$ ${g.price}</span>
                             <input type="button" class="item_add items" value="Add to cart" onclick="buy(${g.id})">
                             <div class="clearfix"> </div>
@@ -61,9 +63,6 @@
                     </div>
                 </div>
             </c:forEach>
-
-
-
         </div>
 
         <jsp:include page="./page.jsp">
@@ -72,11 +71,7 @@
         </jsp:include>
         </div>
     </div>
-</div>
 <!--//products-->
-
-
-
 
 
 
