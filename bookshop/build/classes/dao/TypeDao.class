@@ -1,0 +1,31 @@
+/
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package dao;
+
+import java.sql.SQLException;
+import java.util.List;
+import model.Type;
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
+import utils.DBUtil;
+
+public class TypeDao {
+    public TypeDao() {
+    }
+
+    public List<Type> GetAllType() throws SQLException {
+        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
+        String sql = "select * from type";
+        return (List)r.query(sql, new BeanListHandler(Type.class));
+    }
+
+    public Type selectTypeNameByID(int typeid) throws SQLException {
+        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
+        String sql = "select * from type where id=?";
+        return (Type)r.query(sql, new BeanHandler(Type.class), new Object[]{typeid});
+    }
+}
