@@ -25,9 +25,9 @@
 		});
 	</script>
 </head>
-<body>
 	 
 	
+<body>
 
 	<!--header-->
     <jsp:include page="./header.jsp"></jsp:include>
@@ -36,7 +36,7 @@
 	
 	<!--//single-page-->
 	<div class="single">
-		<div class="container">
+		<div class="container" style="background-color: rgb(242, 242, 242, 0.8); padding: 50px; margin-top: 5%; margin-bottom:5%">
 			<div class="single-grids">				
 				<div class="col-md-4 single-grid">		
 					<div class="flexslider">
@@ -44,21 +44,17 @@
 						<ul class="slides">
 							<li data-thumb="${g.cover}">
 								<div class="thumb-image"> <img src="${g.cover}" data-imagezoom="true" class="img-responsive"> </div>
-							</li>
-							<li data-thumb="${g.image1}">
-								 <div class="thumb-image"> <img src="${g.image1}" data-imagezoom="true" class="img-responsive"> </div>
-							</li>
-							<li data-thumb="${g.image2}">
-							   <div class="thumb-image"> <img src="${g.image2}" data-imagezoom="true" class="img-responsive"> </div>
-							</li> 
+
 						</ul>
 					</div>
 				</div>	
-				<div class="col-md-4 single-grid simpleCart_shelfItem">		
-					<h3>${g.name}</h3>
+
+				<div class="col-md-5 single-grid simpleCart_shelfItem">		
+					<h3 style="font-weight: bold;">${g.name}</h3>
 					<div class="tag">
 						<p>Category: <a href="goods.action?typeid=5">${g.type.name}</a></p>
 					</div>
+					<br>
 					<p>${g.intro}</p>
 					<div class="galry">
 						<div class="prices">
@@ -70,24 +66,25 @@
 						<a href="javascript:;" class="add-cart item_add" onclick="buy(${g.id})">Add to cart</a>
 					</div>
 				</div>
-				<div class="col-md-4 single-grid1">
-					<!-- <h2>Book category</h2> -->
-					<ul>
-                        <li><a  href="./goods_list">All</a></li>
 
+				<div class="col-md-3 single-grid1">
+					<br>
+					<h4>Book Category</h4>
+					
+					<ul style="margin-left: 30px">
+                        <li style="color: #000000"><a href="./goods_list">All Books</a></li>
                         <c:forEach items="${typeList}" var="t">
                             <li><a href="./goods_list?typeid=${t.id}">${t.name}</a></li>
                         </c:forEach>
 					</ul>
 				</div>
+				
 				<div class="clearfix"> </div>
 			</div>
 		</div>
 	</div>
+		
 	
-	
-	
-
 
 	<!--footer-->
     <jsp:include page="./footer.jsp"></jsp:include>
