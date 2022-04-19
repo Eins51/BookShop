@@ -20,7 +20,6 @@ public class OrderListServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         User u = (User) request.getSession().getAttribute("user");
         if(u==null)
         {
