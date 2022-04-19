@@ -1,3 +1,4 @@
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -14,13 +15,9 @@
 	<script type="text/javascript" src="layer/layer.js"></script>
 	<script type="text/javascript" src="js/cart.js"></script>
 </head>
-<body>
+
 	
-	
-
-
-
-
+<body>	
 
 	<!--header-->
 	<jsp:include page="./header.jsp"></jsp:include>
@@ -35,19 +32,12 @@
 				<div class="alert alert-success">${msg }</div>
 			</c:if>
 
-			<p><a class="btn btn-success" href="./order_list">Check my order</a></p>
+			<p><a class="btn btn-success" style="margin-left:40%" href="./order_list">Check my order</a></p>
 		</div>
 	</div>
 	<!--//cart-items-->	
 	
 	
-
-
-
-
-	<!--footer-->
-	<jsp:include page="./footer.jsp"></jsp:include>
-	<!--//footer-->
 
 
 </body>
