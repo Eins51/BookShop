@@ -25,7 +25,7 @@
 
 	<!--account-->
 	<div class="account">
-		<div class="container">
+		<div class="container" style="background-color: rgb(242, 242, 242, 0.8); margin-top: 5%; margin-bottom:5%">
 			<div class="register">
 				<c:if test="${!empty msg }">
 					<div class="alert alert-danger">${msg }</div>
@@ -33,6 +33,7 @@
 				<form action="./user_rigister" method="post">
 					<div class="register-top-grid">
 						<h3 style="color:#333399;">Register</h3>
+						<br><br>
 						<div class="input">
 							<span>User Name <label style="color:red;">*</label></span>
 							<input type="text" name="username" placeholder="Please input your user name" required="required">
@@ -59,6 +60,7 @@
 						</div>
 						<div class="clearfix"> </div>
 					</div>
+					<br>
 					<div class="register-but text-center">
 					   <input type="submit" value="Submit" style="background:#99CCFF;border-color:#99CCFF;border-radius: 12px;">
 					   <div class="clearfix"> </div>
