@@ -32,6 +32,9 @@
 	<!--cart-items-->
 	<div class="cart-items">
 		<div class="container">
+			<c:if test="${!empty failMsg }">
+				<div class="alert alert-danger">${failMsg }</div>
+			</c:if>
 		
 		
 		
