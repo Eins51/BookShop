@@ -44,7 +44,13 @@
 						<ul class="slides">
 							<li data-thumb="${g.cover}">
 								<div class="thumb-image"> <img src="${g.cover}" data-imagezoom="true" class="img-responsive"> </div>
-
+							</li>
+							<li data-thumb="${g.image1}">
+								 <div class="thumb-image"> <img src="${g.image1}" data-imagezoom="true" class="img-responsive"> </div>
+							</li>
+							<li data-thumb="${g.image2}">
+							   <div class="thumb-image"> <img src="${g.image2}" data-imagezoom="true" class="img-responsive"> </div>
+							</li>						
 						</ul>
 					</div>
 				</div>	
