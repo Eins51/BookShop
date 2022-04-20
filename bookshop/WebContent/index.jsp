@@ -29,7 +29,7 @@
     <div class="container">
         <h2 class="hdng" >Today's Special</h2>
         <br>
-        <h2> 
+        <h2 class="title"> 
         	<a href="./goods_detail?id=${scroll.id}">${scroll.name}</a><span></span></h2>
         <p></p>
         <a class="banner_a" href="javascript:;" onclick="buy(${scroll.id})" >Add to cart now !</a>
