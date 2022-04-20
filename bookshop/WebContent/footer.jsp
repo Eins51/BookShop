@@ -4,7 +4,7 @@
 <div class="footer">
     <div class="container">
         <div class="text-center">
-            <p> BookShop</p>
+            <p><span class="glyphicon glyphicon-copyright-mark"> A9-Null</span>  BookShop</p>
         </div>
     </div>
 </div>
