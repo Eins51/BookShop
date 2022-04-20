@@ -416,6 +416,16 @@ input:focus {
     font-weight: 800;
 	text-align:left;
 }
+.banner h2.title {
+	color: #333399; 
+	text-shadow: 2px 2px 5px #fff; 
+	font: italic 4em Georgia, serif;
+	width: 70%;
+	overflow: hidden;
+	display:-webkit-box;
+	-webkit-line-clamp:3;
+	-webkit-box-orient: vertical;
+	}
 .banner p {
     font-size: 1.3em;
     margin: 1em 0 3em;
