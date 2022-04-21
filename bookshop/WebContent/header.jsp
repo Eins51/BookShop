@@ -78,9 +78,7 @@
         <div class="header-info navbar-inverse"> 
             <div class="header-right cart">
                 <a href="goods_cart.jsp">
-                    <span class="glyphicon glyphicon-shopping-cart <c:if test="${param.flag==8 }">active</c:if>" aria-hidden="true">
-                    <span class="card_num">
-                    <c:choose><c:when test="${empty order}">0</c:when><c:otherwise>${order.amount}</c:otherwise></c:choose></span></span>
+                    <span class="glyphicon glyphicon-shopping-cart <c:if test="${param.flag==8 }">active</c:if>" aria-hidden="true"><span class="card_num"><c:choose><c:when test="${empty order}">0</c:when><c:otherwise>${order.amount}</c:otherwise></c:choose></span></span>
                 </a>
             </div>
             <div class="clearfix"> </div>
