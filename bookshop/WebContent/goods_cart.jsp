@@ -14,13 +14,9 @@
 	<script type="text/javascript" src="layer/layer.js"></script>
 	<script type="text/javascript" src="js/cart.js"></script>
 </head>
+
+
 <body>
-	
-	
-
-
-
-
 
 	<!--header-->
 	<jsp:include page="./header.jsp">
@@ -28,18 +24,15 @@
 	</jsp:include>
 	<!--//header-->
 
-	
+
 	<!--cart-items-->
 	<div class="cart-items">
-		<div class="container">
+		<div class="container" style="background-color: rgb(242, 242, 242, 0.8); padding: 50px" >
 			<c:if test="${!empty failMsg }">
 				<div class="alert alert-danger">${failMsg }</div>
 			</c:if>
-		
-		
-		
-			<h2>My Shopping Cart</h2>
 
+			<h2>My Shopping Cart</h2>
 
 			<c:forEach items="${order.itemMap }" var="item">
 				<div class="cart-header col-md-6">
@@ -61,20 +54,15 @@
 					</div>
 				</div>
 			</c:forEach>
-			
+
 			<div class="cart-header col-md-12">
-				<hr>
+				<hr style="background-color:#C6A477; height:1px">				
 				<h3>Total Price: $ ${order.total}</h3>
-				<a class="btn btn-success btn-lg" style="margin-left:74%" href="./order_submit">Place Order</a>
+				<a class="btn btn-success btn-lg" style="margin-left:85%" href="./order_submit">Place Order</a>
 			</div>
-			
-			
-			
 		</div>
 	</div>
-	<!--//cart-items-->	
-	
-	
+	<!--//cart-items-->
 
 
 
