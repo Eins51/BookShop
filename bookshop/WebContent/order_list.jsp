@@ -55,9 +55,9 @@
 								</c:forEach>
 							</td>
 							<td>
-								<p>receiver name: ${order.name }</p>
-								<p>phone: ${order.phone }</p>
-								<p>address: ${order.address }</p>
+								<p><strong>Receiver name:</strong> ${order.name }</p>
+								<p><strong>Phone:</strong> ${order.phone }</p>
+								<p><strong>Address:</strong> ${order.address }</p>
 							</td>
 							<td>
 								<p>
