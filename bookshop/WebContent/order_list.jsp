@@ -152,7 +152,9 @@
  
                         </div>
 					        </c:if>
+					<c:if test="${order.status==2 }">
 					    <a class="btn btn-danger" href="./status_update?id=${order.id }&status=6">Cancel</a>
+					</c:if>
 							</td>
 						</tr>
 
