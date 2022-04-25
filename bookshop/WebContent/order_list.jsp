@@ -123,7 +123,7 @@
 						<button id="myBtn" class="btn btn-warning">Return</button>
 						<div id="myModal" class="modal">
  
-                      
+                        
                         <div class="modal-content">
                         <span class="close">&times;</span>
                            
@@ -152,9 +152,9 @@
  
                         </div>
 					        </c:if>
-					<c:if test="${order.status==2 }">
+					        <c:if test="${order.status==2 }">
 					    <a class="btn btn-danger" href="./status_update?id=${order.id }&status=6">Cancel</a>
-					</c:if>
+					    </c:if>
 							</td>
 						</tr>
 
@@ -164,21 +164,28 @@
 	</div>
 	<!--//cart-items-->	
 	
+
+
 	<!--footer-->
 	<jsp:include page="./footer.jsp"></jsp:include>
 	<!--//footer-->
 <script>
 var modal = document.getElementById('myModal');
+
 var btn = document.getElementById("myBtn");
+
 var span = document.querySelector('.close');
+
 
 btn.onclick = function() {
  modal.style.display = "block";
 }
 
+
 span.onclick = function() {
  modal.style.display = "none";
 }
+
 
 window.onclick = function(event) {
  if (event.target == modal) {
@@ -186,7 +193,10 @@ window.onclick = function(event) {
  }
 }
 
+ 
+
 </script>
 
 </body>
+
 </html>
