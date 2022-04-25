@@ -10,6 +10,10 @@ public class Goods {
 	private String intro;
 	private int stock;
 	private Type type;
+	private String book_review1;
+	private String book_review2;
+	private String book_review3;
+	private String book_review4;
 	
 	private boolean isScroll;
 	private boolean isHot;
@@ -45,6 +49,30 @@ public class Goods {
 			type = new Type();
 		}
 		type.setName(typename);
+	}
+	public String getBook_review1() {
+		return book_review1;
+	}
+	public void setBook_review1(String book_review1) {
+		this.book_review1 = book_review1;
+	}
+	public String getBook_review2() {
+		return book_review2;
+	}
+	public void setBook_review2(String book_review2) {
+		this.book_review2 = book_review2;
+	}
+	public String getBook_review3() {
+		return book_review3;
+	}
+	public void setBook_review3(String book_review3) {
+		this.book_review3 = book_review3;
+	}
+	public String getBook_review4() {
+		return book_review4;
+	}
+	public void setBook_review4(String book_review4) {
+		this.book_review4 = book_review4;
 	}
 	@Override
 	public String toString() {
