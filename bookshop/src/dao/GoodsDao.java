@@ -70,7 +70,7 @@ public class GoodsDao {
     }
     public Goods getGoodsById(int id) throws SQLException {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
-        String sql = "select g.id,g.name,g.cover,g.image1,g.image2,g.price,g.intro,g.stock,t.id typeid,t.name typename from goods g,type t where g.id = ? and g.type_id=t.id";
+        String sql = "select g.id,g.name,g.cover,g.image1,g.image2,g.price,g.intro,g.stock,g.book_review1,g.book_review2,g.book_review3,g.book_review4,t.id typeid,t.name typename from goods g,type t where g.id = ? and g.type_id=t.id";
         return r.query(sql, new BeanHandler<Goods>(Goods.class),id);
     }
     public int getSearchCount(String keyword) throws SQLException {
