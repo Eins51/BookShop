@@ -38,6 +38,40 @@ ul,label{
 body a:hover{
 	text-decoration:none;
 }
+
+.comment{
+	background-color: rgb(192, 192, 192, 0.5);
+	width:100%;
+	height: 40px;
+	padding-left:15px;
+	padding-top:5px;
+	font-size:1.5em;
+}
+.bookcomment{
+	padding:15px;
+}
+.bookcomment img{
+	width:50px;
+	border-radius: 100%;
+	margin-left:40px;
+}
+.bookcomment p{
+	margin-top:5px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display:-webkit-box;
+	-webkit-line-clamp:3;
+	-webkit-box-orient: vertical;
+	text-align: justify;
+}
+.bookcomment h4{
+	margin-top:10px
+}
+.bookcomment h5{
+	text-align:right; 
+	margin-top:10px
+}
+
 /*--header--*/
 .header {
     background-color:rgb(192, 192, 192);       /*--#79654A--*/
