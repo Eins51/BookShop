@@ -58,7 +58,7 @@
 				<div class="col-md-6 single-grid simpleCart_shelfItem">		
 					<h3 style="font-weight: bold;">${g.name}</h3>
 					<div class="tag">
-						<p>Category: <a href="goods.action?typeid=5">${g.type.name}</a></p>
+						<p>Category: <a href="./goods_list?typeid=${g.type.id}">${g.type.name}</a></p>
 					</div>
 					<br>
 					<p>${g.intro}</p>
