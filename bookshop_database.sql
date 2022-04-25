@@ -11,7 +11,7 @@
  Target Server Version : 80028
  File Encoding         : 65001
 
- Date: 25/04/2022 17:23:31
+ Date: 25/04/2022 22:08:41
 */
 
 SET NAMES utf8mb4;
@@ -22,23 +22,23 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `goods`;
 CREATE TABLE `goods`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(0) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `cover` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `image1` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `image2` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `price` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `intro` varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `stock` int NULL DEFAULT NULL,
-  `type_id` int NULL DEFAULT NULL,
+  `stock` int(0) NULL DEFAULT NULL,
+  `type_id` int(0) NULL DEFAULT NULL,
   `book_review1` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `book_review2` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `book_review3` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `book_review4` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  INDEX `fk_type_id_idx`(`type_id` ASC) USING BTREE,
+  INDEX `fk_type_id_idx`(`type_id`) USING BTREE,
   CONSTRAINT `fk_type_id` FOREIGN KEY (`type_id`) REFERENCES `type` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 119 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 120 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of goods
@@ -150,61 +150,50 @@ INSERT INTO `goods` VALUES (119, 'The Club: A Novel', 'picture/7-14.jpg', 'pictu
 -- ----------------------------
 DROP TABLE IF EXISTS `order`;
 CREATE TABLE `order`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(0) NOT NULL AUTO_INCREMENT,
   `total` float NULL DEFAULT NULL,
-  `amount` int NULL DEFAULT NULL,
+  `amount` int(0) NULL DEFAULT NULL,
   `status` tinyint(1) NULL DEFAULT NULL,
   `paytype` tinyint(1) NULL DEFAULT NULL,
   `name` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `phone` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `address` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `datetime` datetime NULL DEFAULT NULL,
-  `user_id` int NULL DEFAULT NULL,
+  `datetime` datetime(0) NULL DEFAULT NULL,
+  `user_id` int(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  INDEX `fk_user_id_idx`(`user_id` ASC) USING BTREE,
+  INDEX `fk_user_id_idx`(`user_id`) USING BTREE,
   CONSTRAINT `fk_user_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 95 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of order
--- ----------------------------
-INSERT INTO `order` VALUES (95, 65, 2, 2, 1, 'Hypnus', '1111', '1111', '2022-03-24 15:39:32', 39);
+) ENGINE = InnoDB AUTO_INCREMENT = 96 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for orderitem
 -- ----------------------------
 DROP TABLE IF EXISTS `orderitem`;
 CREATE TABLE `orderitem`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(0) NOT NULL AUTO_INCREMENT,
   `price` float NULL DEFAULT NULL,
-  `amount` int NULL DEFAULT NULL,
-  `goods_id` int NULL DEFAULT NULL,
-  `order_id` int NULL DEFAULT NULL,
+  `amount` int(0) NULL DEFAULT NULL,
+  `goods_id` int(0) NULL DEFAULT NULL,
+  `order_id` int(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  INDEX `fk_order_id_idx`(`order_id` ASC) USING BTREE,
-  INDEX `fk_orderitem_goods_id_idx`(`goods_id` ASC) USING BTREE,
+  INDEX `fk_order_id_idx`(`order_id`) USING BTREE,
+  INDEX `fk_orderitem_goods_id_idx`(`goods_id`) USING BTREE,
   CONSTRAINT `fk_order_id` FOREIGN KEY (`order_id`) REFERENCES `order` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `fk_orderitem_goods_id` FOREIGN KEY (`goods_id`) REFERENCES `goods` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 105 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of orderitem
--- ----------------------------
-INSERT INTO `orderitem` VALUES (104, 36, 1, 13, 95);
-INSERT INTO `orderitem` VALUES (105, 29, 1, 14, 95);
+) ENGINE = InnoDB AUTO_INCREMENT = 106 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for recommend
 -- ----------------------------
 DROP TABLE IF EXISTS `recommend`;
 CREATE TABLE `recommend`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(0) NOT NULL AUTO_INCREMENT,
   `type` tinyint(1) NULL DEFAULT NULL,
-  `goods_id` int NULL DEFAULT NULL,
+  `goods_id` int(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  INDEX `fk_goods_id_idx`(`goods_id` ASC) USING BTREE,
+  INDEX `fk_goods_id_idx`(`goods_id`) USING BTREE,
   CONSTRAINT `fk_goods_id` FOREIGN KEY (`goods_id`) REFERENCES `goods` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 49 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 50 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of recommend
@@ -235,10 +224,10 @@ INSERT INTO `recommend` VALUES (49, 1, 13);
 -- ----------------------------
 DROP TABLE IF EXISTS `type`;
 CREATE TABLE `type`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(0) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of type
@@ -256,7 +245,7 @@ INSERT INTO `type` VALUES (7, 'Literature');
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(0) NOT NULL AUTO_INCREMENT,
   `username` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `email` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `password` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
@@ -266,9 +255,9 @@ CREATE TABLE `user`  (
   `isadmin` bit(1) NULL DEFAULT NULL,
   `isvalidate` bit(1) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  UNIQUE INDEX `username_UNIQUE`(`username` ASC) USING BTREE,
-  UNIQUE INDEX `email_UNIQUE`(`email` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 39 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
+  UNIQUE INDEX `username_UNIQUE`(`username`) USING BTREE,
+  UNIQUE INDEX `email_UNIQUE`(`email`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 40 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user
