@@ -49,4 +49,20 @@ public class OrderService {
         }
         return list;
     }
+    public void statusReturn(int id) {
+        try {
+            oDao.statusReturn(id);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+    public void statusCancel(int id) {
+        try {
+            oDao.statusCancel(id);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
 }
