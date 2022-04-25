@@ -276,6 +276,5 @@ CREATE TABLE `user`  (
 INSERT INTO `user` VALUES (1, 'admin', 'admin@vilicode.com', 'admin', 'manager', '3330048', 'The People\'s Republic of China', b'1', b'0');
 INSERT INTO `user` VALUES (37, 'randy', '2396129937@qq.com', 'randy', 'randy', '18819773661', 'Qingyuan Dongcheng', b'0', b'0');
 INSERT INTO `user` VALUES (38, 'syz', '3324779867@qq.com', 'pch520', 'syz', '15773852102', 'Changsha, Hunan', b'0', b'0');
-INSERT INTO `user` VALUES (39, 'Hypnus', '605597301@qq.com', '123456', 'Hypnus', '1111', '1111', b'0', b'0');
 
 SET FOREIGN_KEY_CHECKS = 1;
