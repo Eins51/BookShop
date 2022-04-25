@@ -8,7 +8,7 @@ public class Order {
     private int id;
     private float total;//total price
     private int amount;//total number of goods
-    private int status;//1.unpaid/2.paid/3.delivered/4.done
+    private int status;//1.unpaid/2.paid/3.delivered/4.done/5.return/6.cancel
     private int paytype;//1.WeChat/2.Alipay/3.pay on delivery
     private String name;
     private String phone;
