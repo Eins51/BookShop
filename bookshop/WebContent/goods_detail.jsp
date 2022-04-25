@@ -38,7 +38,7 @@
 	<div class="single">
 		<div class="container" style="background-color: rgb(242, 242, 242, 0.8); padding: 50px; margin-top: 5%; margin-bottom:5%">
 			<div class="single-grids">				
-				<div class="col-md-4 single-grid">		
+				<div class="col-md-3 single-grid">		
 					<div class="flexslider">
 						
 						<ul class="slides">
@@ -55,7 +55,7 @@
 					</div>
 				</div>	
 
-				<div class="col-md-5 single-grid simpleCart_shelfItem">		
+				<div class="col-md-6 single-grid simpleCart_shelfItem">		
 					<h3 style="font-weight: bold;">${g.name}</h3>
 					<div class="tag">
 						<p>Category: <a href="goods.action?typeid=5">${g.type.name}</a></p>
@@ -78,15 +78,66 @@
 					<h4>Book Category</h4>
 					
 					<ul style="margin-left: 30px">
-                        <li style="color: #000000"><a href="./goods_list">All Books</a></li>
-                        <c:forEach items="${typeList}" var="t">
-                            <li><a href="./goods_list?typeid=${t.id}">${t.name}</a></li>
-                        </c:forEach>
+                        			<li style="color: #000000"><a href="./goods_list">All Books</a></li>
+                        			<c:forEach items="${typeList}" var="t">
+                            				<li><a href="./goods_list?typeid=${t.id}">${t.name}</a></li>
+                        			</c:forEach>
 					</ul>
 				</div>
 				
 				<div class="clearfix"> </div>
 			</div>
+			
+			<div class="comment">Comment</div>
+			<br>	
+			
+			<c:if test="${g.book_review1 != null}">		
+				<div class="bookcomment">
+					<div class="col-md-2 single-grid">
+						<img src="images/p.png" class="img-responsive">
+						<h4>Anonymous user</h4>
+					</div>
+					<p>${g.book_review1}</p>
+					<h5>2021-12-20 19:30:29</h5>
+				</div>
+				<hr>
+			</c:if>	
+			
+			<c:if test="${g.book_review2 != null}">		
+				<div class="bookcomment">
+					<div class="col-md-2 single-grid">
+						<img src="images/p.png" class="img-responsive">
+						<h4>Anonymous user</h4>
+					</div>
+					<p>${g.book_review2}</p>
+					<h5>2022-01-20 09:54:49</h5>
+				</div>
+				<hr>
+				</c:if>	
+
+			<c:if test="${g.book_review3 != null}">		
+				<div class="bookcomment">
+					<div class="col-md-2 single-grid">
+						<img src="images/p.png" class="img-responsive">
+						<h4>Anonymous user</h4>
+					</div>
+					<p>${g.book_review3}</p>
+					<h5>2022-02-24 16:35:26</h5>
+				</div>
+				<hr>
+			</c:if>		
+
+			<c:if test="${g.book_review4 != null}">		
+				<div class="bookcomment">
+					<div class="col-md-2 single-grid">
+						<img src="images/p.png" class="img-responsive">
+						<h4>Anonymous user</h4>
+					</div>
+					<p>${g.book_review4}</p>
+					<h5>2022-03-17 23:46:49</h5>
+				</div>
+				<hr>
+			</c:if>						
 		</div>
 	</div>
 		
