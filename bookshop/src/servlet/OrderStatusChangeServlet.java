@@ -29,3 +29,4 @@ public class OrderStatusChangeServlet extends HttpServlet {
         response.sendRedirect("./order_list?status="+status);
     }
 }
+
