@@ -38,4 +38,14 @@ public class OrderDao {
         String sql = "select i.id,i.price,i.amount,g.name from orderitem i,goods g where order_id=? and i.goods_id=g.id";
         return r.query(sql, new BeanListHandler<OrderItem>(OrderItem.class),orderid);
     }
+    public void statusReturn(int id) throws SQLException {
+        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
+        String sql ="update `order` set status=5 where id = ?";
+        r.update(sql,id);
+    }
+    public void statusCancel(int id) throws SQLException {
+        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
+        String sql ="update `order` set status=6 where id = ?";
+        r.update(sql,id);
+    }
 }
