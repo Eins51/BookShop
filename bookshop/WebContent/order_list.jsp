@@ -120,12 +120,12 @@
 							<td><p>${order.datetime }</p></td>
 							<td>
 							<c:if test="${order.status==3 }">
-						<button id="myBtn" class="btn btn-warning">Return</button>
-						<div id="myModal" class="modal">
+						<a href="javascript:show(${order.id });" class="btn btn-warning">Return</a>
+						<div id=${order.id } class="modal">
  
                         
                         <div class="modal-content">
-                        <span class="close">&times;</span>
+                        <span class="close"><a href="javascript:hide(${order.id });">&times;</a></span>
                            
     <form>
     <fieldset>
@@ -170,30 +170,22 @@
 	<jsp:include page="./footer.jsp"></jsp:include>
 	<!--//footer-->
 <script>
-var modal = document.getElementById('myModal');
-
-var btn = document.getElementById("myBtn");
-
-var span = document.querySelector('.close');
 
 
-btn.onclick = function() {
- modal.style.display = "block";
+function show(id){
+	var el = document.getElementById(id)
+	el.style.display = "block";
 }
 
-
-span.onclick = function() {
- modal.style.display = "none";
+function hide(id){
+	var el = document.getElementById(id)
+	el.style.display = "none";
+	
 }
-
-
-window.onclick = function(event) {
- if (event.target == modal) {
-     modal.style.display = "none";
- }
-}
-
  
+
+
+
 
 </script>
 
