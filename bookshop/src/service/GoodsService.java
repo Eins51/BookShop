@@ -120,5 +120,13 @@ public class GoodsService {
         p.setList(list);
         return p;
     }
+    public void update(Goods goods) {
+        try {
+            gDao.update(goods);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
 
 }
