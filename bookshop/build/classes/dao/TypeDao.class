@@ -1,4 +1,4 @@
-/
+//
 // Source code recreated from a .class file by IntelliJ IDEA
 // (powered by FernFlower decompiler)
 //
@@ -27,5 +27,29 @@ public class TypeDao {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
         String sql = "select * from type where id=?";
         return (Type)r.query(sql, new BeanHandler(Type.class), new Object[]{typeid});
+    }
+
+    public Type select(int id) throws SQLException {
+        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
+        String sql = "select * from type where id = ?";
+        return (Type)r.query(sql, new BeanHandler(Type.class), new Object[]{id});
+    }
+
+    public void insert(Type t) throws SQLException {
+        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
+        String sql = "insert into type(name) values(?)";
+        r.update(sql, t.getName());
+    }
+
+    public void update(Type t) throws SQLException {
+        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
+        String sql = "update type set name=? where id = ?";
+        r.update(sql, new Object[]{t.getName(), t.getId()});
+    }
+
+    public void delete(int id) throws SQLException {
+        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
+        String sql = "delete from type where id = ?";
+        r.update(sql, id);
     }
 }
