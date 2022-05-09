@@ -48,5 +48,41 @@ public class OrderDao {
         String sql ="update `order` set status=6 where id = ?";
         r.update(sql,id);
     }
+    public void deleteOrder(Connection con ,int id) throws SQLException {
+        QueryRunner r = new QueryRunner();
+        String sql ="delete from `order` where id = ?";
+        r.update(con,sql,id);
+    }
+    public void deleteOrderItem(Connection con ,int id) throws SQLException {
+        QueryRunner r = new QueryRunner();
+        String sql ="delete from orderitem where order_id=?";
+        r.update(con,sql,id);
+    }
+    public int getOrderCount(int status) throws SQLException {
+        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
+        String sql = "";
+        if(status==0) {
+            sql = "select count(*) from `order`";
+            return r.query(sql, new ScalarHandler<Long>()).intValue();
+        }else {
+            sql = "select count(*) from `order` where status=?";
+            return r.query(sql, new ScalarHandler<Long>(),status).intValue();
+        }
+    }
+    public List<Order> selectOrderList(int status, int pageNumber, int pageSize) throws SQLException {
+        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
+        if(status==0) {
+            String sql = "select o.id,o.total,o.amount,o.status,o.paytype,o.name,o.phone,o.address,o.datetime,u.username from `order` o,user u where o.user_id=u.id order by o.datetime desc limit ?,?";
+            return r.query(sql, new BeanListHandler<Order>(Order.class), (pageNumber-1)*pageSize,pageSize );
+        }else {
+            String sql = "select o.id,o.total,o.amount,o.status,o.paytype,o.name,o.phone,o.address,o.datetime,u.username from `order` o,user u where o.user_id=u.id and o.status=? order by o.datetime desc limit ?,?";
+            return r.query(sql, new BeanListHandler<Order>(Order.class),status, (pageNumber-1)*pageSize,pageSize );
+        }
+    }
+    public void updateStatus(int id,int status) throws SQLException {
+        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
+        String sql ="update `order` set status=? where id = ?";
+        r.update(sql,status,id);
+    }
 }
 

@@ -128,5 +128,37 @@ public class GoodsService {
             e.printStackTrace();
         }
     }
+    public void insert(Goods goods) {
+        try {
+            gDao.insert(goods);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+    public void delete(int id) {
+        try {
+            gDao.delete(id);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+    public void addRecommend(int id,int type) {
+        try {
+            gDao.addRecommend(id, type);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+    public void removeRecommend(int id,int type) {
+        try {
+            gDao.removeRecommend(id, type);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
 
 }
