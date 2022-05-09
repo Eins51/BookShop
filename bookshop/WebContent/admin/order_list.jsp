@@ -21,6 +21,8 @@
 			<li <c:if test="${status==2 }">class="active"</c:if> role="presentation"><a href="../admin/order_list?status=2">Paid</a></li>
 			<li <c:if test="${status==3 }">class="active"</c:if> role="presentation"><a href="../admin/order_list?status=3">In delivery</a></li>
 			<li <c:if test="${status==4 }">class="active"</c:if> role="presentation"><a href="../admin/order_list?status=4">Completed</a></li>
+                        <li <c:if test="${status==5 }">class="active"</c:if> role="presentation"><a href="../admin/order_list?status=5">Return</a></li>
+                        <li <c:if test="${status==6 }">class="active"</c:if> role="presentation"><a href="../admin/order_list?status=6">Cancel</a></li>
 		</ul>
 	
 		<br>
@@ -58,6 +60,8 @@
 							<c:if test="${order.status==2 }"><span style="color:red;">Paid</span></c:if>
 							<c:if test="${order.status==3 }"><span style="color:green;">Shipped</span></c:if>
 							<c:if test="${order.status==4 }"><span style="color:black;">Completed</span></c:if>
+							<c:if test="${order.status==5 }"><span style="color:blue;">Return</span></c:if>
+							<c:if test="${order.status==6 }"><span style="color:brown;">Cancel</span></c:if>
 	
 						</p>
 					</td>
