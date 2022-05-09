@@ -77,3 +77,4 @@ public class UserDao {
         return r.query(sql, new BeanHandler<User>(User.class),id);
     }
 }
+
