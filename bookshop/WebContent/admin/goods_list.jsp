@@ -40,10 +40,10 @@
 				<th width="5%">ID</th>
 				<th width="10%">Picture</th>
 				<th width="13%">Book Name</th>
-				<th width="20%">Introduction</th>
+				<th width="21%">Introduction</th>
 				<th width="7%">Price</th>
-				<th width="10%">Category</th>
-				<th width="25%">Option</th>
+				<th width="11%">Category</th>
+				<th width="23%">Option</th>
 			</tr>
 	
 			<c:forEach items="${p.list }" var="g">
@@ -57,6 +57,14 @@
 					<td>
 						<p>
 							<c:choose>
+								<c:when test="${g.isScroll }">
+									<a class="btn btn-info" href="../admin/goods_recommend?id=${g.id }&method=remove&typeTarget=1&pageNumber=${p.pageNumber}&type=${type}">Remove from Scroll</a>
+								</c:when>
+								<c:otherwise>
+									<a class="btn btn-primary" href="../admin/goods_recommend?id=${g.id }&method=add&typeTarget=1&pageNumber=${p.pageNumber}&type=${type}">Add to Scroll</a>
+								</c:otherwise>
+							</c:choose>
+							<c:choose>
 								<c:when test="${g.isHot }">
 									<a class="btn btn-info" href="../admin/goods_recommend?id=${g.id }&method=remove&typeTarget=2&pageNumber=${p.pageNumber}&type=${type}">Remove from Best Seller</a>
 								</c:when>
@@ -64,22 +72,14 @@
 									<a class="btn btn-primary" href="../admin/goods_recommend?id=${g.id }&method=add&typeTarget=2&pageNumber=${p.pageNumber}&type=${type}">Add to Best Seller</a>
 								</c:otherwise>
 							</c:choose>
+						</p>
+						<p>
 							<c:choose>
 								<c:when test="${g.isNew }">
 									<a class="btn btn-info" href="../admin/goods_recommend?id=${g.id }&method=remove&typeTarget=3&pageNumber=${p.pageNumber}&type=${type}">Remove from New Book</a>
 								</c:when>
 								<c:otherwise>
 									<a class="btn btn-primary" href="../admin/goods_recommend?id=${g.id }&method=add&typeTarget=3&pageNumber=${p.pageNumber}&type=${type}">Add to New Book</a>
-								</c:otherwise>
-							</c:choose>
-						</p>
-						<p>
-							<c:choose>
-								<c:when test="${g.isScroll }">
-									<a class="btn btn-info" href="../admin/goods_recommend?id=${g.id }&method=remove&typeTarget=1&pageNumber=${p.pageNumber}&type=${type}">Remove from Scroll</a>
-								</c:when>
-								<c:otherwise>
-									<a class="btn btn-primary" href="../admin/goods_recommend?id=${g.id }&method=add&typeTarget=1&pageNumber=${p.pageNumber}&type=${type}">Add to Scroll</a>
 								</c:otherwise>
 							</c:choose>
 						</p>
