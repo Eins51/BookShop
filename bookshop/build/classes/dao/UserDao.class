@@ -6,9 +6,12 @@
 package dao;
 
 import java.sql.SQLException;
+import java.util.List;
 import model.User;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 import utils.DBUtil;
 
 public class UserDao {
@@ -47,6 +50,12 @@ public class UserDao {
         return (User)r.query(sql, new BeanHandler(User.class), new Object[]{email, password});
     }
 
+    public User selectById(int id) throws SQLException {
+        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
+        String sql = "select * from user where id=?";
+        return (User)r.query(sql, new BeanHandler(User.class), new Object[]{id});
+    }
+
     public void updateUserAddress(User user) throws SQLException {
         QueryRunner r = new QueryRunner(DBUtil.getDataSource());
         String sql = "update user set name = ?,phone=?,address=? where id = ?";
@@ -58,4 +67,23 @@ public class UserDao {
         String sql = "update user set password = ? where id = ?";
         r.update(sql, new Object[]{user.getPassword(), user.getId()});
     }
+
+    public int selectUserCount() throws SQLException {
+        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
+        String sql = "select count(*) from user";
+        return ((Long)r.query(sql, new ScalarHandler())).intValue();
+    }
+
+    public List selectUserList(int pageNo, int pageSize) throws SQLException {
+        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
+        String sql = "select * from user limit ?,?";
+        return (List)r.query(sql, new BeanListHandler(User.class), new Object[]{(pageNo - 1) * pageSize, pageSize});
+    }
+
+    public void delete(int id) throws SQLException {
+        QueryRunner r = new QueryRunner(DBUtil.getDataSource());
+        String sql = "delete from user where id = ?";
+        r.update(sql, id);
+    }
 }
+
