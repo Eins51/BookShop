@@ -6,6 +6,9 @@ import org.apache.commons.dbutils.handlers.BeanHandler;
 import utils.DBUtil;
 
 import java.sql.SQLException;
+import java.util.List;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 public class UserDao {
     public void addUser(User user) throws SQLException {
