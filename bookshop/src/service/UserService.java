@@ -2,10 +2,10 @@ package service;
 
 import dao.UserDao;
 import model.User;
-
-import java.sql.SQLException;
 import model.Page;
 import java.util.List;
+
+import java.sql.SQLException;
 
 public class UserService {
     private UserDao uDao = new UserDao();
@@ -64,7 +64,7 @@ public class UserService {
             e.printStackTrace();
         }
     }
-      public Page getUserPage(int pageNumber) {
+    public Page getUserPage(int pageNumber) {
         Page p = new Page();
         p.setPageNumber(pageNumber);
         int pageSize = 7;
