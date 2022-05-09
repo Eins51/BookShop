@@ -4,6 +4,8 @@ import dao.UserDao;
 import model.User;
 
 import java.sql.SQLException;
+import model.Page;
+import java.util.List;
 
 public class UserService {
     private UserDao uDao = new UserDao();
