@@ -49,6 +49,6 @@
 |   |   |   |---user_center.jsp //user center page
 |   |   |   |---user_login.jsp  //user login page
 |   |   |   |---user_register.jsp //user register page
-|   |   |   |---WEB-INF //library for dependencies
+|   |   |   |---WEB-INF //configuration files, including web.xml and jar packages 
 |   |   |---build //class files
 ```
